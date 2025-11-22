@@ -11,6 +11,14 @@
   --button-green-hover: #145017;
   --button-beige: #F5F5DC;
   --button-black: #000000;
+  /* Paleta Residencial Pôr do Sol */
+  --logo-green-dark: #1F3529;
+  --logo-green-mid: #2F6B2F;
+  --logo-beige-text: #F0E6C9;
+  --logo-beige-bg: #F4E4C8;
+  --logo-orange: #FF8F1C;
+  --logo-orange-light: #FFC45E;
+  --logo-blue: #0096D6;
 }
 
 @theme inline {
@@ -23,7 +31,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #171717;
+    --background: #5a4e42;
     --foreground: #F5F5DC;
     --card-bg: #222218;
   }
@@ -35,10 +43,25 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Hero usando paleta da marca */
+.bg-hero-residencial {
+  background: linear-gradient(135deg, var(--logo-green-dark) 0%, var(--logo-green-mid) 55%, var(--logo-orange) 100%);
+  color: var(--logo-beige-text);
+}
+
+/* Ajuste de cards para bege da marca */
+.card {
+  background: var(--logo-beige-bg);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 1.5em;
+  margin-bottom: 1em;
+}
+
 /* Botões principais */
 .btn-primary {
-  background: var(--button-green);
-  color: var(--button-beige);
+  background: linear-gradient(90deg, var(--logo-orange), var(--logo-orange-light));
+  color: var(--logo-green-dark);
   border-radius: 8px;
   padding: 0.75em 1.5em;
   font-weight: bold;
@@ -47,7 +70,7 @@ body {
   animation: desirePulse 3.2s ease-in-out infinite;
 }
 .btn-primary:hover {
-  background: var(--button-green-hover);
+  background: linear-gradient(90deg, var(--logo-orange-light), var(--logo-orange));
   transform: translateY(-2px) scale(1.015);
 }
 
